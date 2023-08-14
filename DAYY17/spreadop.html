@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//object
+/*
+var ob = {
+    "a":1,
+    b:2,
+    c:"Hello"
+}
+console.log(ob);
+
+
+
+
+ var ov = {
+  ...ob
+}
+
+console.log(ov);
+
+
+//array
+
+var arr =[1,2,3,4]
+
+  var uhu =[
+...arr
+]
+ console.log(arr);
+ console.log(uhu);
+
+
+
+
+//spread operator
+
+ function sum(a,b,...c){
+console.log(a);
+console.log(b);
+console.log(c);
+
+ }
+
+sum(10,20,56,89,78,23,45,56,12,34,566);
+//
+
+function sum(...c){
+console.log(c);
+
+}
+sum(34,56,67,78,97,54,123);
+
+
+//
+
+function s(...c){
+ var sum = 0;
+c.forEach(function(value){
+sum = sum +value;
+})
+    return sum;
+}
+
+ console.log(s(23,45,65,76,87,12,89));
+
+
+
+
+//arrow fn
+
+ function s(...c){
+ var sum = 0;
+ c.forEach(value=>sum = sum + value);
+
+  console.log(sum);
+}
+
+ s(23,45,65,76,87,12,89);
+*/
+//
+/*
+
+function sum(a,b,c){
+    console.log(a+b+c);
+}
+
+var arrr = [10,30,50] ;
+
+ sum(arrr);
+
+//sprd
+
+function sum(a,b,c){
+    console.log(a+b+c);
+}
+
+var arrr = [10,30,50] ;
+
+ sum(...arrr);
+*/
+//object
+var ob ={a:3,b:4,c:"hello"}
+console.log(ob);
+
+ var  obj ={...ob}
+ console.log(obj);
+
+//array
+
+var arr = ["apple","orange","banana"];
+
+console.log(arr);
+
+//spread operator
+
+var ar2 = [...arr]
+
+console.log(ar2);
+
+
+
+//function 
+ function sum(a,b,...c){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+ }
+sum(20,30,45,78,89,45,23,12,78);
+
+
+//sum
+
+function s(...c){
+
+var sum = 0;
+
+c.forEach(function(value){
+
+ sum = sum + value;
+})
+
+
+ console.log(sum);
+
+
+}
+
+s(23,43,65,76,87,90,12,54,67);
+
+
+
+    </script>
+</body>
+</html>

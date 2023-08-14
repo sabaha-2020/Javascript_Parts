@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2>Student Marks Calculation System</h2>  
+
+  <form name="myform">
+
+<b>Enter Marks 1 :</b><input type = "textbox" name ="num1"><br>
+<b>Enter Marks 2 :</b><input type = "textbox" name ="num2"><br>
+<b>Enter Marks 3 :</b><input type = "textbox" name ="num3"><br>
+
+<input type="button" value="calculate" onclick="calculate()">
+  </form>
+
+</body>
+
+<script>
+   var a;
+   var b;
+   var c;
+   var result =0;
+   var avg =0;
+   var percentage =0;
+
+   function calculate(){
+
+a = parseInt(myform.num1.value);
+b = parseInt(myform.num2.value);
+c = parseInt(myform.num3.value);
+result = a+b+c;
+
+avg = result/3;
+
+percentage = result/300 * 100;
+
+   
+
+document.write("The total is:"+ " " + result +" " +"</br>");
+document.write("The Average is:"+ " " + avg +" " +"</br>");
+document.write("The Percentage is:"+ " " + percentage +" %" +"</br>");
+
+
+if(avg > 90){
+    document.write("A+ grade");
+
+}
+else if(avg > 80)
+
+{
+    document.write("A grade");
+
+   }
+
+   else if(avg > 70)
+
+{
+    document.write("B grade");
+
+   }
+   else if(avg > 60)
+
+  {
+    document.write("c grade");
+
+   }
+
+   else if(avg > 50){
+    document.write("D grade");
+   }
+
+
+   else{
+    document.write("Fail");
+   }
+
+
+  }
+
+
+
+</script>
+
+</html>

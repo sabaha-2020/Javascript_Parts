@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+              <h3>Saffron public school</h3>  
+              <h4>Grade Card</h4>
+
+            </div>
+
+            <form  name="frm">
+            <div class="card-body">
+
+          
+              <div class="row">
+                <div class="col-8">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Sl No</span>
+                        <input type="text" class="form-control" value="" name="slno" id="slno"  placeholder="sl.no" aria-label="sl.no" aria-describedby="basic-addon1">
+                      </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Student Id</span>
+                    <input type="text" class="form-control"  value="" name="id" id="id" placeholder="id" aria-label="id" aria-describedby="basic-addon1">
+                  </div>
+
+                  <div class="input-group mb-3">
+
+                    <span class="input-group-text" id="basic-addon1">Name</span>
+                    <input type="text" class="form-control"  value="" name="name" id="name" placeholder="name" aria-label="name" aria-describedby="basic-addon1">
+                  </div>
+        
+                 
+        
+        
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Course</span>
+                    <input type="text" class="form-control"  value="" name="course" id="course" placeholder="course" aria-label="cat" aria-describedby="basic-addon1">
+                  </div>
+  
+                </div>
+                <div class="col-4">
+                
+    
+    
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Physics</span>
+                    <input type="text" class="form-control"  value="" name="physics" id="ph" placeholder="physics" aria-label="physics" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Chemistry</span>
+                    <input type="text" class="form-control" value="" name="chemistry" id="ch"  placeholder="chemistry" aria-label="chemistry" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Maths</span>
+                    <input type="text" class="form-control" value="" name="maths" id="mt"  placeholder="maths" aria-label="maths" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">English</span>
+                    <input type="text" class="form-control" value="" name="english" id="en"  placeholder="english" aria-label="english" aria-describedby="basic-addon1">
+                  </div>
+                </div>  
+              </div>
+            </div>
+            
+
+              <button type="button" class="btn btn-primary" onclick="add()">Submit</button>
+           
+              </form>
+              <table class="table table-bordered" id="table">
+                <thead class="table-secondary">
+                  <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Student Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Course</th>
+                  
+                    <th scope="col">Physics</th>
+                  
+                    <th scope="col">Chemistry</th>
+                   
+                    <th scope="col">Maths</th>
+                    
+                    <th scope="col">English</th>
+                    
+                    <th scope="col">Obtained Mark</th>
+                    <th scope="col">Total Mark</th>
+                    <th scope="col">Average</th>
+                    <th scope="col">Percentage</th>
+                    <th scope="col">Result</th>
+                    
+                  </tr>
+              
+              </table>
+
+                  
+              </div>
+
+
+            </div>
+          </div>
+      </div>
+     
+ 
+       
+          
+
+
+      <script>
+
+
+var row = 1;
+var totalmark = 400;
+            var data = {
+                slno:"null",
+                studentid:"null",
+                name:"null",
+                course:"null",
+                physics:"null",
+                
+                chemistry:"null",
+                maths:"null",
+                english:"null",
+                obtainedmark:"",
+                
+                average:"",
+                percentage:"",
+                result:""
+              
+
+
+            };
+            function add()
+            {
+                data.slno = parseInt(document.getElementById("slno").value);
+                
+                data.studentid = parseInt(document.getElementById("id").value);
+                data.name = parseInt(document.getElementById("name").value);
+                data.course = parseInt(document.getElementById("course").value);
+                data.physics = parseInt(document.getElementById("ph").value);
+                data.chemistry =parseInt(document.getElementById("ch").value);
+                data.maths = parseInt(document.getElementById("mt").value);
+                data.english = parseInt(document.getElementById("en").value);
+            
+                data.obtainedmark = (data.physics+data.chemistry+data.maths+data.english);
+                data.average = data.obtainedmark /3;
+                data.percentage = data.obtainedmark/400 * 100;
+               
+                
+
+            }
+            function showlist()
+
+            {
+                 add();
+
+                var addRow = parseInt(document.getElementById("table"));
+                var newRow = addRow.insertRow(1);
+
+              var cel1 = newRow.insertCell(0);
+              var cel2 = newRow.insertCell(1);
+              var cel3 = newRow.insertCell(2);
+              var cel4 = newRow.insertCell(3);
+              var cel5 = newRow.insertCell(4);
+              var cel6 = newRow.insertCell(5);
+              var cel7 = newRow.insertCell(6);
+              var cel8 = newRow.insertCell(7);
+              var cel9 = newRow.insertCell(8);
+              var cel10 = newRow.insertCell(9);
+              var cel11 = newRow.insertCell(10);
+              var cel12 = newRow.insertCell(11);
+             
+             
+              
+
+
+
+              
+              cel1.innerHTML = data.slno;
+              cel2.innerHTML = data.studentid;
+              cel3.innerHTML = data.name;
+              cel4.innerHTML = data.course;
+              cel5.innerHTML = data.physics;
+             
+              cel6.innerHTML = data.chemistry;
+            
+              cel7.innerHTML = data.maths;
+             
+              cel8.innerHTML = data.english;
+            
+              cel9.innerHTML = data.obtainedmark;
+            
+              cel10.innerHTML = data.average;
+              cel11.innerHTML = data.percentage;
+              
+                           
+            }
+
+
+
+
+/*
+var data = [];
+var total = 0;
+var discount = 0;
+
+function add() {
+  var slno = (.getElementById("slno").value);
+  var sl no = (.getElementById("sl no").value);
+  var name = (.getElementById("name").value);
+  var category = (.getElementById("cat").value);
+  var quantity = (.getElementById("qty").value);
+  var rate = (.getElementById("rate").value);
+   
+
+  rate = parseFloat(rate);
+  quantity = parseFloat(quantity);
+  var amount = rate * quantity;
+  var commission = amount * 5 / 100;
+  total += amount;
+
+  
+
+
+  data.push({
+    slno: slno,
+    sl no: sl no,
+    name: name,
+    category: category,
+    quantity: quantity,
+    rate: rate,
+    amount: amount,
+    commission: commission,
+    
+  });
+
+  displayData();
+  calculateTotal();
+  calculateDiscount();
+  calculateGrandTotal();
+}
+
+function displayData() {
+  var table = (.getElementById("table");
+  var row = table.insertRow();
+  var slnoCell = row.insertCell(0);
+  var sl noCell = row.insertCell(1);
+  var nameCell = row.insertCell(2);
+  var categoryCell = row.insertCell(3);
+  var qtyCell = row.insertCell(4);
+  var rateCell = row.insertCell(5);
+  var amountCell = row.insertCell(6);
+  var commCell = row.insertCell(7);
+
+
+
+  var index = data.length - 1;
+  slnoCell.innerHTML = data[index].slno;
+  sl noCell.innerHTML = data[index].sl no;
+  nameCell.innerHTML = data[index].name;
+  categoryCell.innerHTML = data[index].category;
+  qtyCell.innerHTML = data[index].quantity;
+  rateCell.innerHTML = data[index].rate;
+  amountCell.innerHTML = data[index].amount;
+  commCell.innerHTML = data[index].commission;
+ 
+  
+
+}
+
+function calculateTotal() {
+    (.getElementById("tot").value);= total.toFixed(2);
+  }
+
+
+  function calculateDiscount() {
+  var discountInput = (.getElementById("disc");
+  var grandTotalInput = (.getElementById("gtotal");
+  
+  var discountAmount = parseFloat(discount);
+  var grandTotal = total - discountAmount;
+  
+  discountInput.value);= discountAmount.toFixed(2);
+  grandTotalInput.value);= grandTotal.toFixed(2);
+}
+*/
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

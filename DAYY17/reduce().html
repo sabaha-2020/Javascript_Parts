@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+/*
+      var items = [{
+name:"Monitor",
+price:300
+},
+{
+    name:"Keyboard",
+price:500
+},
+{
+    name:"Mouse",
+price:100  
+}]  
+
+var totalAmount = 0;
+
+for(let i=0;i<items.length;i++){
+
+    totalAmount=totalAmount+items[i].price;
+}
+
+console.log(totalAmount);
+
+
+//reduce
+
+
+items.reduce(function(totalAmount,item){
+totalAmount = totalAmount + item.price;
+},0)
+
+console.log(totalAmount);
+//
+items.reduce(function(totalAmount,item){
+console.log(totalAmount);
+console.log(name);
+console.log(item.price);
+
+totalAmount = totalAmount + item.price;
+},0)
+
+console.log(totalAmount);
+*/
+
+
+var items = [{
+
+    name:"Monitor",
+    price:300
+},
+{
+    name:"Keyboard",
+    price:500
+},
+{
+    name:"Mouse",
+    price:100  
+}] ;
+
+var sum = 0;
+
+for(let i=0;i<items.length;i++){
+   sum = sum+items[i].price;
+}
+console.log(sum);
+
+
+//reduce()
+
+
+items.reduce(function(sum,item){
+    sum = sum+item.price;
+},0)
+
+console.log(sum);
+
+    </script>
+</body>
+</html>

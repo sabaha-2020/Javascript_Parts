@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="head">welcome</h1>
+<h2 class="head">hello</h2>
+<p class="head">learn javascript</p>
+    <input id="txt" type="text">
+    <button id="change">click me</button>
+<script>
+
+
+
+var text="hello world";
+document.getElementById("change").innerHTML=text;
+
+
+ var t =document.getElementById("change");
+
+t.innerHTML ="awesome!!!";
+
+
+
+
+ var cntnt ="you  are welcome";
+
+   var txt = document.getElementsByClassName("head");
+   txt[2].innerHTML = cntnt;
+
+
+var tg = document.getElementsByTagName("h1");
+tg[0].style.color = "blue";
+
+</script>
+
+</body>
+
+</html>

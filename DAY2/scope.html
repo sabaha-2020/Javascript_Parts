@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+//global
+var a = 10;
+ 
+function scope(){
+  a  = 20;    // already  declared variable
+ 
+}
+
+console.log(a);
+scope();
+console.log(a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//global
+//var a = 20;
+
+//function definition
+/*function abc(){
+
+
+ let a = 10;     //redeclare
+ console.log(a);
+   
+}
+
+
+abc();
+
+console.log(a);
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var a = 10;
+ 
+function scope(){
+  let a  = 20;    //  redeclared variable local
+  console.log(a);
+}
+
+scope();
+console.log(a);
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

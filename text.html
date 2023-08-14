@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h2>Calculation</h2>  
+<div class="container">
+    <form name="myform">
+  <table>
+    <tr>
+ <td><b>Physics :</b></td><td><input id="sub1" type = "textbox" name ="physics"><br></td></tr>
+  <tr>
+ <td><b>Chemistry :</b></td><td><input id="sub2" type = "textbox" name ="chemistry"><br></td></tr>
+  <tr>
+<td> <b>Maths :</b></td><td><input id="sub3" type = "textbox" name ="maths"><br></td></tr>
+</table>
+<div>
+    <input type="button" value="calculate" onclick=" return calculate()"> <br><br>
+</div>
+ 
+ 
+    </form>
+    </div>
+
+<table>
+    <tr>
+    <td> <b>Total Marks :</b></td>
+    <td>150</td>
+
+    </tr>
+    
+    <tr>
+        <td> <b>Obtained Marks :</b></td>
+        <td id="obtain"></td>
+    
+        </tr>    
+        <tr>
+            <td> <b>Average :</b></td>
+            <td id="avg"></td>
+        
+            </tr> 
+            <tr>
+                <td> <b>Percentage :</b></td>
+                <td id="per"></td>
+            
+                </tr>  
+                
+                <tr>
+                    <td> <b>Final grade :</b></td>
+                    <td id="remarks"></td>
+                
+                    </tr>  
+
+</table>
+
+
+   
+
+    
+
+<script>
+
+   var a;
+   var b;
+   var c;
+   var obtain =0;
+   
+
+   function calculate(){
+
+a = parseInt(document.getElementById("sub1").value);
+b = parseInt(document.getElementById("sub2").value);
+c = parseInt(document.getElementById("sub3").value);
+/*result = a+b+c;*/
+
+/*document.write("Total marks: 300"+"<br>")*/
+
+/*document.write("The total is:"+ " " + obtain +" " +"</br>");*/
+
+
+if(a>50||b>50||c>50){
+
+alert("enter correct value")
+
+}else{
+  var obtain = a+b+c;
+  document.getElementById("obtain").innerHTML = obtain;
+
+  var average = obtain/3;
+document.getElementById("avg").innerHTML = average;
+  
+var percentage = obtain/150*100;
+document.getElementById("per").innerHTML = percentage;
+
+/*if(a>50 && b>50 && c>50){
+
+    document.getElementById("remarks").innerHTML = pass;
+} 
+else{
+
+    document.getElementById("remarks").innerHTML = fail; 
+}
+}
+return false;
+
+   }
+   */
+
+
+   if(average > 90){
+    document.write("A+ grade");
+
+}
+else if(average > 80)
+
+{
+    document.write("A grade");
+
+   }
+
+   else if(average > 70)
+
+{
+    document.write("B grade");
+
+   }
+   else if(average > 60)
+
+  {
+    document.write("c grade");
+
+   }
+
+   else if(average > 50){
+    document.write("D grade");
+   }
+
+
+   else{
+    document.write("Fail");
+   }
+
+
+  }
+
+   }
+
+</script>
+
+
+</body>
+</html>

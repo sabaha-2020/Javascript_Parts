@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onpageshow="show()" onunload="chitti()" >
+    <button onclick="openwindow()">open window</button>
+<button onclick="closewindow()">close window</button><br>
+
+<img src="C:\Users\Elitebook\Desktop\JSTutorial\micky.png" onerror="imgg()">
+
+<script>
+
+function openwindow(){
+/*window.open("https://www.google.com/","_parent");*/
+window.open("https://www.google.com/","","width=500px,height=500px,left=200px,top=200px");
+}
+
+function closewindow(){
+
+    window.close("https://www.google.com/","","width=500px,height=500px,left=200px,top=200px");
+}
+
+function show(){
+alert("page is showed");
+
+}
+
+function imgg(){
+alert("onerror occured");
+
+}
+
+function chitti(){
+   alert("thanks");
+}
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="init()" >
+<h2 style="text-align: center; color: maroon;">WELCOME TO MICKY'S WORLD</h2>
+<img id="change"  src="micky.png" width="200" height="200"><br><br><br>
+<button onclick="left()">left</button> 
+
+<button onmouseout="right()">right</button> 
+<button ondblclick="topimg()">top</button> 
+<button onmousedown="bottomimg()">bottom</button> <br><br>
+<button onmouseup="move()">Move</button> 
+<button onmouseover="stop()">stop</button>
+<button onclick="comeback()">ComeBack</button>
+<br><br>
+<button onclick="openwindow()">open Window</button>
+<button onclick="closewindow()">closewindow</button>
+
+<br>
+<br>
+<p>Key Events</p>
+<input type="text">
+<br>
+
+
+
+
+
+
+<script>
+var imgObj =null;
+var imgTime=null;
+var originalLeft = 300;
+//var result =document.getElementById("change");  
+function init()
+{
+
+   imgObj = document.getElementById("change");
+   imgObj.style.position= "relative ";
+   /*imgObj.style.left = originalLeft + 'px';*/
+   imgObj.style.left= "350px ";
+   imgObj.style.top= "0px ";
+}
+
+function left(){
+    
+  
+   imgObj.style.left =parseInt(imgObj.style.left) + 10 +"px" ;
+  
+   //imgObj.style.left =  imgObj.style.left + 50;
+
+  
+}
+
+function right(){
+  
+   imgObj.style.left =parseInt(imgObj.style.left) - 10 +"px" ;
+}
+
+function topimg(){
+  
+  
+   imgObj.style.top =parseInt(imgObj.style.top) - 10 +"px" ;
+   
+}
+function bottomimg(){
+  
+  
+  imgObj.style.top =parseInt(imgObj.style.top) + 10 +"px" ;
+  
+}
+
+
+function move(){
+  
+
+    imgTime= setInterval(left, 100);
+
+}
+
+
+
+function stop(){
+
+      clearInterval(imgTime);
+}
+
+function comeback(){
+   stop();
+imgObj.style.left = originalLeft +"px";
+
+}
+
+
+
+document.addEventListener('keydown',(event)=>{
+
+      imgObj.style.backgroundColor = Color();
+
+})
+
+
+
+function Color(){
+
+   var color = '#' ;
+    for (var i=0;i< 6;i++){
+
+var Digits = parseInt(Math.random()*16).toString(16); 
+color += Digits;
+
+    }
+    return color;
+}
+
+
+document.addEventListener('keyup',(event)=>{
+   
+     imgObj.style.backgroundColor = '';
+
+})
+
+
+
+
+function openwindow(){
+   window.open("http://www.google.com/"," ","width:200, height:200 ,left:300 top:100");
+    
+}
+
+
+
+function closewindow(){
+window.close("http://www.google.com/",)
+
+}
+
+
+document.addEventListener('keypress',(event)=>{
+    document.getElementById("content").innerHTML="Welcome to Micky's World";
+})
+
+
+</script>
+</body>
+</html>

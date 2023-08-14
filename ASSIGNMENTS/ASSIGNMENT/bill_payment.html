@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bill payment</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 style="text-align: center;">Bill Payment</h2>
+    <div class="container">
+        <div class="part1">
+            <form action="myform">
+                <fieldset>
+                 <legend style="font-weight:bold; font-size: 15px;" >PERSONAL INFORMATION:</legend><br><br>
+                 <table>
+                    <tr>
+                 <td><label>CARD ID:</label><br><br> </td>
+                <td> <input type="text" id="cardid" name="cardid"  placeholder="Id"><br><br> </td>
+            </tr>
+            <tr>
+                 <td><label>FULL NAME:</label><br><br> </td>
+                 
+                <td> <input type="text" id="fname" name="fname"  placeholder="Full Name"><br><br> </td>
+            </tr>
+            <tr>
+
+                 <td><label>CONTACT NO:</label><br><br> </td>
+                  <td><input type="text" id="contact" name="contact"  placeholder="Contact No"><br><br> </td></tr>
+                 </table>
+                </fieldset><br><br>
+
+
+
+                <fieldset>
+                    <legend style="font-weight:bold; font-size: 15px;">YOUR ORDERS:</legend>
+                    <table>
+                        <tr>
+                   <td><label>SL NO:</label><br><br></td>
+                   <td> <input type="text" id="no2"><br><br></td>
+                </tr>
+                <tr>
+                   <td> <label>ITEM CODE:</label> <br><br> </td>
+                    <td> <input type="text" id="item2"><br> <br></td>
+                    </tr><tr>
+                    <td> <label> NAME:</label> <br><br> </td>
+                    <td><input type="text" id="name2"><br><br> </td>
+                    </tr><tr>
+                     <td> <label>CATEGORY:</label> <br><br> </td>
+                    <td> <input type="text" id="category2"><br><br> </td>
+                    </tr><tr>
+                    <td><label>QUANTITY:</label><br><br>  </td>
+                     <td><input type="text" id="quantity2"><br><br>  </td>
+                     </tr><tr>
+                    <td> <label>PRICE:</label> <br><br>  </td>
+                     <td> <input type="text" id="price2"><br><br>  </td></tr>
+                     <tr>
+                  <td> <label>COMMISION:</label> <br><br> </td>
+                     <td> <input type="text" id="commision2"><br><br> </td></tr>
+                  </table>
+                    
+                   </fieldset>
+               </form>
+           
+               <input style="text-align: center ;" id="btn" type="button" value="calculate" onclick="calculate()">  
+      
+            </div>
+        </div>
+
+<div class="container">
+
+<fieldset>
+
+    <legend>Your Bill</legend>
+    <h3>Card Id:<span id="id1"></span></h3>
+    <h3>Your Name:<span id="name1"></span></h3>
+    <h3>Mobile No:<span id="no1"></span></h3>
+
+    <table border="1">
+        <tr><th>SL NO</th><th>ITEM CODE</th><th>NAME</th><th>CATEGORY</th><th>QUANTITY</th>
+            <th>PRICE</th><th>COMMISION</th></tr>
+
+    </table>
+</fieldset>
+
+
+</div>
+
+</body>
+
+<script>
+ 
+ var id,name,email;
+ var sl="";
+ var item_code="";
+ var name="";
+ var category="";
+ var quantity="";
+ var price="";
+ var commision="";
+
+ document.getElementById("cardid").addEventListener("keyup",function(){
+     id = document.getElementById("cardid").value;
+     document.getElementById("id1").innerHTML =id;
+ })
+
+ 
+ document.getElementById("fname").addEventListener("keyup",function(){
+     name = document.getElementById("fname").value;
+     document.getElementById("name1").innerHTML =name;
+ })
+ 
+ document.getElementById("contact").addEventListener("keyup",function(){
+     contact = document.getElementById("contact").value;
+     document.getElementById("no1").innerHTML =contact;
+ })
+
+ document.getElementById("id2").addEventListener("keyup",function(){
+     contact = this.value;
+   
+     
+ })
+
+ 
+
+ 
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+
+    <script>
+
+        function changeColor(clr,msg1)
+        {
+            //var item[];
+
+
+           // item[0]=prompt("Enter Your Item");
+           document.bgColor=clr;
+           document.fgColor="green"
+
+document.getElementById("msg",).innerHTML=msg1;
+
+
+        }
+
+        function changeColor1()
+        {
+          
+
+document.bgColor="green";
+
+        }
+
+        function addItem()
+        {
+            var itemCode=[],itemCatg=[],itemName=[],itemQty=[],itemRate=[];
+
+            for (var i=0;i<2;i++)
+            {
+             itemCode[i]=prompt("Enter Item Code");
+             itemName[i]=prompt("Enter Item Name");        
+             itemCatg[i]=prompt("Enter Item Category");
+             itemQty[i]=prompt("Enter Item Qty");
+             itemRate[i]=prompt("Enter Item Rate");
+
+            }
+     
+        document.write("<table border='5'>");
+        document.write("<tr> <th> CODE </th><th> NAME </th> <th> CATG </th><th> QTY</th> <th> RATE</th> <th> PRICE</th> <th> COM</th></tr>  " );         
+           
+        for (var i=0;i<2;i++)
+            {       
+         // SHowing Data
+         var price=itemQty * itemRate;
+         com=10;
+        document.write("<tr><td>"+itemCode[i]+"</td><td>"+itemName[i]+"</td><td>"+itemCatg[i]+"</td><td>"+itemQty[i]+"</td><td>"+itemRate[i]+"</td><td>"+price+"</td><td>"+com+"</td></tr>");
+              }
+              document.write("</table>");
+
+            }
+        </script>
+
+</head>
+<body>
+
+    <p id="msg"> I love my india </p>
+
+    <input type="button" value="AddMe" onmouseover="changeColor('#00FF00','I LOVE MY CALCIUT')" onmouseout="changeColor('#c5d4c3','I LOV EMY KERALA')">
+
+    <input type="button" value="ClickMe" onclick="addItem()">
+</body>
+</html>

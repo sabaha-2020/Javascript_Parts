@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<h1>Event Listener</h1>
+
+    <button id="btn">click</button>
+    <span id="counter">0</span>
+
+    <script>
+
+
+
+   document.getElementById("btn").addEventListener("click",function(){
+    
+alert('call1')
+
+   })
+   document.getElementById("btn").addEventListener("click",function(){
+    
+    alert('call2')
+    
+       })
+    </script>-->
+
+
+
+    <h1>Event Listener</h1>
+
+    <button id="btn">click</button>
+    <span id="counter">0</span>
+
+    <script>
+
+   var count = 0;
+
+
+   document.getElementById("btn").addEventListener("click",function(){
+   count++;
+   document.getElementById("counter").innerHTML =count;
+
+   })
+   
+    </script>
+
+</body>
+</html>
